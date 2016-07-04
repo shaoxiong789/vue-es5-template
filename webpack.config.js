@@ -1,7 +1,11 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var webpack = require('webpack')
 module.exports = {
-	entry: './src/main.js',
+	entry:
+	 {
+       bundle: './src/main.js',
+       vendor: ['vue']
+    },
 	output: {
 		path: './dist',
 		filename: 'build.js',
@@ -20,6 +24,7 @@ module.exports = {
 	      compress: {
 	        warnings: false
 	      }
-	    })
+	    }),
+	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js')
   ]
 }			
