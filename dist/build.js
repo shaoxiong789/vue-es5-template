@@ -98,7 +98,7 @@
 	var Vue = __webpack_require__(1)
 	var VueRouter = __webpack_require__(3)
 	var routerConfig = __webpack_require__(4)
-	var app = __webpack_require__(15)
+	var app = __webpack_require__(19)
 	Vue.use(VueRouter)
 
 	var router = new VueRouter()
@@ -13036,12 +13036,12 @@
 		router.map({
 			'/': {
 				component: function (resolve) {
-	    			__webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(5)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this))
+	    			__webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(5)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)) // 异步加载view1
 	    		}
 			},
 			'/v2': {
 				component: function (resolve) {
-	    			__webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(11)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this))
+	    			__webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(15)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this))
 	    		}
 			}
 		})
@@ -13367,28 +13367,32 @@
 /* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(16)
+	__webpack_require__(20)
 	module.exports = {
 		data () {
 			return {
 				msg: "我是来自app/index.js 的 msg"
 			}
 		},
-		template: __webpack_require__(18)
+		template: __webpack_require__(22)
 	}
 
 /***/ },
-/* 16 */
+/* 20 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 17 */,
-/* 18 */
+/* 21 */,
+/* 22 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\r\n\tapp\r\n\t<h1 v-text=\"msg\"></h1>\r\n\t<router-view keep-alive></router-view>\r\n</div>";

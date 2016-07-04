@@ -1,31 +1,22 @@
-webpackJsonp([2],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+webpackJsonp([2],{
+
+/***/ 15:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(12)
+	__webpack_require__(16)
 	module.exports = {
-		template: __webpack_require__(14)
+		template: __webpack_require__(18)
 	}
 
 /***/ },
-/* 12 */
+
+/***/ 16:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(13);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(9)(content, {});
@@ -45,7 +36,8 @@ webpackJsonp([2],[
 	}
 
 /***/ },
-/* 13 */
+
+/***/ 17:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -59,10 +51,12 @@ webpackJsonp([2],[
 
 
 /***/ },
-/* 14 */
+
+/***/ 18:
 /***/ function(module, exports) {
 
 	module.exports = "<div>\r\n\t<h2>view2</h2>\r\n</div>";
 
 /***/ }
-]);
+
+});
