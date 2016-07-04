@@ -1,0 +1,26 @@
+{
+  "name": "vue-es5-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack"
+  },
+  "author": "dingyiming",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "vue": "^1.0.26",
+    "vue-router": "^0.7.13"
+  }
+}
