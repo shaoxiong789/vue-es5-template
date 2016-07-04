@@ -1,14 +1,16 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
 var webpack = require('webpack')
 module.exports = {
 	entry:
 	 {
-       bundle: './src/main.js',
+       app: './src/main.js',
        vendor: ['vue']
     },
 	output: {
 		path: './dist',
-		filename: 'build.js',
+		filename: 'app.[hash].js',
 		publicPath: '/dist/'
 	},
 	module: {
@@ -19,12 +21,18 @@ module.exports = {
 		]
 	},
 	plugins: [
-        new ExtractTextPlugin("build.css"),
+        new ExtractTextPlugin("app.[hash].css"),
         new webpack.optimize.UglifyJsPlugin({
 	      compress: {
 	        warnings: false
 	      }
 	    }),
-	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js')
+	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js'),
+	    // https://github.com/ampedandwired/html-webpack-plugin
+	    new HtmlWebpackPlugin({
+	      filename: 'index.html',
+	      template: 'index.html',
+	      inject: true
+	    })
   ]
 }			
