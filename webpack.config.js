@@ -1,5 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-
+var webpack = require('webpack')
 module.exports = {
 	entry: './src/main.js',
 	output: {
@@ -9,12 +9,17 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-		  { test: /\.(png|jpg|jpeg|gif)$/, loader: 'url?limit=10000&name=images/[name].[ext]' },
+		  	{ test: /\.(png|jpg|jpeg|gif)$/, loader: 'url?limit=10000&name=images/[name].[ext]' },
 			{ test: /\.html$/,loader: 'html-loader' },
 			{ test: /\.css$/,loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
 		]
 	},
 	plugins: [
-        new ExtractTextPlugin("build.css")
+        new ExtractTextPlugin("build.css"),
+        new webpack.optimize.UglifyJsPlugin({
+	      compress: {
+	        warnings: false
+	      }
+	    })
   ]
-}
+}			

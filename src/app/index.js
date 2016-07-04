@@ -1,9 +1,9 @@
 require('./app.css')
 module.exports = {
-	data () {
+	template: require('./app.html'),
+	data: function() {
 		return {
-			msg: "我是来自app/index.js 的 msg"
+			msg: "123"
 		}
-	},
-	template: require('./app.html')
+	}
 }
