@@ -15,7 +15,7 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-		  	{ test: /\.(png|jpg|jpeg|gif)$/, loader: 'url?limit=10000&name=images/[name].[ext]' },
+		  	{ test: /\.(png|jpg|jpeg|gif|woff|svg|ttf|eot)$/, loader: 'url?limit=10000&name=images/[name].[ext]' },
 			{ test: /\.html$/,loader: 'html-loader' },
 			{ test: /\.css$/,loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
 		]
