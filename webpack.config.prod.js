@@ -9,8 +9,8 @@ module.exports = {
        vendor: ['vue','vue-router']
     },
 	output: {
-		path: './dist',
-		filename: 'app.[hash].js',
+		path: './dest',
+		filename: 'js/app.[hash].js',
 		publicPath: '' // 可以在这里配置对应的输出CDN路径如 http://localhost:8080/
 	},
 	module: {
@@ -21,16 +21,16 @@ module.exports = {
 		]
 	},
 	plugins: [
-        new ExtractTextPlugin("app.[hash].css"),
+        new ExtractTextPlugin("css/app.[hash].css"),
         new webpack.optimize.UglifyJsPlugin({
 	      compress: {
 	        warnings: false
 	      }
 	    }),
-	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js'),
+	    new webpack.optimize.CommonsChunkPlugin('vendor',  'js/vendor-vue-vuerouter.js'),
 	    // https://github.com/ampedandwired/html-webpack-plugin
 	    new HtmlWebpackPlugin({
-	      filename: 'index.html',
+	      filename: 'html/index.html',
 	      template: 'index.html',
 	      inject: true
 	    })

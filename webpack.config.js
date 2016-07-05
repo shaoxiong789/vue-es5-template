@@ -9,7 +9,7 @@ module.exports = {
        vendor: ['vue','vue-router']
     },
 	output: {
-		path: './dist',
+		path: './dest',
 		filename: 'app.js',
 		publicPath: ''
 	},
@@ -27,7 +27,7 @@ module.exports = {
 	        warnings: false
 	      }
 	    }),
-	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js'),
+	    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor-vue-vuerouter.js'),
 	    // https://github.com/ampedandwired/html-webpack-plugin
 	    new HtmlWebpackPlugin({
 	      filename: 'index.html',
