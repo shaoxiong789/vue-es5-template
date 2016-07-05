@@ -11,7 +11,7 @@ module.exports = function(router) {
   //   		}
 		// }
 		'/': {
-			component: requir('./view1')
+			component: require('./view1')
 		},
 		'/v2': {
 			component: require('./view2')

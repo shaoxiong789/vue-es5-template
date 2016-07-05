@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: './dest',
 		filename: 'js/app.[hash].js',
-		publicPath: '' // 可以在这里配置对应的输出CDN路径如 http://localhost:8080/
+		publicPath: '../' // 可以在这里配置对应的输出CDN路径如 http://localhost:8080/
 	},
 	module: {
 		loaders: [
