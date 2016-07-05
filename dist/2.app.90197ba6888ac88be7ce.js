@@ -1,0 +1,1 @@
+webpackJsonp([2],{7:function(o,t,e){t=o.exports=e(1)(),t.push([o.id,"h2{color:blue}",""])},11:function(o,t,e){var i=e(7);"string"==typeof i&&(i=[[o.id,i,""]]),e(2)(i,{}),i.locals&&(o.exports=i.locals)},15:function(o,t){o.exports="<div> <h2>view2</h2> </div>"},22:function(o,t,e){e(11),o.exports={template:e(15)}}});

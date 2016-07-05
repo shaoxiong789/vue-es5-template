@@ -10,8 +10,8 @@ module.exports = {
     },
 	output: {
 		path: './dist',
-		filename: 'app.js',
-		publicPath: ''
+		filename: 'app.[hash].js',
+		publicPath: '' // 可以在这里配置对应的输出CDN路径如 http://localhost:8080/
 	},
 	module: {
 		loaders: [
@@ -21,7 +21,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-        new ExtractTextPlugin("app.css"),
+        new ExtractTextPlugin("app.[hash].css"),
         new webpack.optimize.UglifyJsPlugin({
 	      compress: {
 	        warnings: false

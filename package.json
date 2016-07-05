@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.prod.js -p"
   },
   "author": "dingyiming",
   "license": "ISC",
