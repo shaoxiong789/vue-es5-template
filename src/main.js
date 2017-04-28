@@ -9,4 +9,3 @@ var router = new VueRouter()
 routerConfig(router)
 
 router.start(app,'app')
-

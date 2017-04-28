@@ -1,5 +1,10 @@
-<div>
-	app
-	<h1 v-text="msg"></h1>
-	<router-view keep-alive></router-view>
+<div id="body" class="theme" :class="selectedTheme">
+	<div class="content">
+		<select v-model="selectedTheme" >
+			<<option v-for="theme in themes" :value="theme" >{{theme}}</option>
+		</select>
+		<h1 v-text="msg"></h1>
+		<button v-on:click="triggerTheme">切换主题</button>
+		<router-view keep-alive></router-view>
+	</div>
 </div>
